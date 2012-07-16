@@ -8,6 +8,24 @@
 
 package demo
 
-fun main(args: Array<String>) {
+fun String.hello()
+{
+    println("Hello $this")
+}
+
+fun sum(a: Int, b: Int) = println(a + b)
+
+fun max(a: Int, b: Int) = if (a > b) a else b
+
+fun main(args: Array<String>)
+{
     println("Hello Kotlin !!")
+    "World".hello()
+    args filter { it.length() > 0} forEach{ println("hello $it") }
+
+    sum(5, 6)
+
+    var x = max(10,11)
+
+    println(max(10,12))
 }
