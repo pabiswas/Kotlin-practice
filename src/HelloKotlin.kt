@@ -17,6 +17,12 @@ fun sum(a: Int, b: Int) = println(a + b)
 
 fun max(a: Int, b: Int) = if (a > b) a else b
 
+fun checkString(Str: String): String?
+{
+     if (Str.length > 0) return Str
+    return null
+}
+
 fun main(args: Array<String>)
 {
     println("Hello Kotlin !!")
@@ -28,4 +34,13 @@ fun main(args: Array<String>)
     var x = max(10,11)
 
     println(max(10,12))
+
+    val s = checkString("Partha")
+
+    println(s)
+
+    val s1 = checkString("")
+
+    if(s1 != null)
+        println(s1)
 }
